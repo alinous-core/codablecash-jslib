@@ -1,4 +1,3 @@
-import { toBufferBE } from "bigint-buffer";
 import { ByteBuffer } from "../base_io/ByteBuffer";
 import bigInt from "big-integer";
 

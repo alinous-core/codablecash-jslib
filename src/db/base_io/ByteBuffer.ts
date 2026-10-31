@@ -1,4 +1,3 @@
-import { toBigIntBE, toBufferBE } from "bigint-buffer";
 import { BufferOverflowException } from "./BufferOverflowException";
 import { BigInteger } from "../numeric/BigInteger";
 import bigInt from "big-integer";
@@ -148,7 +147,8 @@ export class ByteBuffer implements IComparable {
     }
 
     public toBigInteger() : BigInteger {
-        let val = toBigIntBE(this.data);
+        //let val = toBigIntBE(this.data);
+        let val = BigInt('0x' + this.data.toString('hex'));
         let ret = new BigInteger(val);
         return ret;
     }
